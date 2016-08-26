@@ -84,7 +84,7 @@ class ReverseInlineModelAdmin(InlineModelAdmin):
         super(ReverseInlineModelAdmin, self).__init__(parent_model, admin_site)
 
     def get_formset(self, request, obj=None, **kwargs):
-        fields = ('pk',)
+        fields = ('id',)
         self.exclude = []
         if self.exclude is None:
             exclude = []
